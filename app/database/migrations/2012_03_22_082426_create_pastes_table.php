@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Create_Pastes_Table {
+class CreatePastesTable {
 
   /**
    * Make changes to the database.

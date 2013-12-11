@@ -12,5 +12,15 @@ Route::get('{paste}/raw', ['as' => 'raw', 'uses' => 'PasteController@raw']);
 
 Route::bind('paste', function($value)
 {
-  return Paste::find(Math::to_base_10($value));
+  try {
+
+    $paste = Paste::findOrFail(Math::to_base_10($value));
+
+  } catch(Exception $e) {
+
+    App::abort(404);
+
+  }
+
+  return $paste;
 });
