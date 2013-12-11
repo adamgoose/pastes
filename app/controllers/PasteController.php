@@ -54,20 +54,20 @@ class PasteController extends \BaseController {
 	public function diff($paste)
 	{
 		$dmp = new DiffMatchPatch\DiffMatchPatch();
-		$diffs = $dmp->diff_main(e($paste->fork->paste), e($paste->paste));
+		$diffs = $dmp->diff_main($paste->fork->paste, $paste->paste);
 		$dmp->diff_cleanupSemantic($diffs);
 
 		$diff = '';
 		foreach($diffs as $d) {
 			switch($d[0]) {
 				case 1:
-					$diff .= "<span class='nocode'><ins>".$d[1]."</ins></span>";
+					$diff .= "<span class='nocode'><ins>".e($d[1])."</ins></span>";
 					break;
 				case -1:
-					$diff .= "<span class='nocode'><del>".$d[1]."</del></span>";
+					$diff .= "<span class='nocode'><del>".e($d[1])."</del></span>";
 					break;
 				default:
-					$diff .= $d[1];
+					$diff .= e($d[1]);
 			}
 		}
 
