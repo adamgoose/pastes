@@ -61,10 +61,10 @@ class PasteController extends \BaseController {
 		foreach($diffs as $d) {
 			switch($d[0]) {
 				case 1:
-					$diff .= "<span class='nocode'><ins>".e($d[1])."</ins></span>";
+					$diff .= "<span class='nocode'><span class='marker ins pull-left'>+</span><ins>".e($d[1])."</ins></span>";
 					break;
 				case -1:
-					$diff .= "<span class='nocode'><del>".e($d[1])."</del></span>";
+					$diff .= "<span class='nocode'><span class='marker del pull-left'>-</span><del>".e($d[1])."</del></span>";
 					break;
 				default:
 					$diff .= e($d[1]);

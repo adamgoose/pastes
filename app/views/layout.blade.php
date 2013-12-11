@@ -6,7 +6,7 @@
   <title>Laravel Paste Bucket</title>
   <meta name="viewport" content="width=device-width">
 
-  {{ HTML::style('//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css') }}
+  {{ HTML::style('css/bootstrap.min.css') }}
   {{ HTML::style('css/style.css') }}
 </head>
 <body onload="prettyPrint()">
@@ -41,6 +41,7 @@
   </div>
 
   {{ HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js') }}
+  {{ HTML::script('js/bootstrap.min.js') }}
   {{ HTML::script('js/prettify.js') }}
   {{ HTML::script('js/tabby.js') }}
   {{ HTML::script('js/script.js') }}

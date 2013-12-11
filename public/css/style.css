@@ -46,6 +46,7 @@ textarea
 	background-color:#fff;
 	font-size: 12px;
 	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  margin: 1em;
 }
 
 .prettyprint ol
@@ -115,4 +116,12 @@ ol.linenums li
 ol li.selected
 {
 	background: #616169 !important;
+}
+
+.marker {
+  margin: 0 0 0 -45px;
+}
+
+.marker.ins {
+  margin: 0 0 0 -60px;
 }
