@@ -16,7 +16,7 @@
                         $("#paster").submit();
                 }
                 </script>
-                <a class="logo" href="http://laravel.com">{{ HTML::image('img/laravel.png') }}</a>
+                <a class="logo" href="http://laravel.com">{{ HTML::image('img/logo-head.png') }}</a>
                 <ul class="buttons">
                         @yield('buttons')
                 </ul>

@@ -1,6 +1,6 @@
 body
 {
-	background-color:#222;
+  background: #3F3F49;
 	margin:0;
 	font-family:sans-serif;
 	color : #fff;
@@ -14,25 +14,26 @@ body
 	padding:0.5em 0.6em 0.6em 0.5em;
 	position:fixed;
 	top:1em;
-	right:1.4em;
+	right:1em;
 	overflow:hidden;
 	background-color:transparent;
-	background-color:rgba(34,34,34,0.7);
+	background-color:rgba(255, 255, 255, 0.7);
 }
 
 .header:hover
 {
-	background-color:#222;
+	background-color:rgba(255, 255, 255, 1);
 }
 
 .logo
 {
 	opacity:0.8;
-	float:right;
 	margin-bottom:0.3em;
+	display: block;
+	text-align: center;
 }
 
-.logo:hover
+.header:hover .logo
 {
 	opacity:1;
 }
@@ -42,6 +43,7 @@ body
 .buttons
 {
 	margin:0;
+	padding: 0;
 }
 
 .buttons li
@@ -54,7 +56,7 @@ body
 {
 	display:inline-block;
 	background-color:#444;
-	color:#aaa;
+	color:#fff;
 	padding:0.2em 0.5em 0.2em 0.5em;
 	text-decoration:none;
 	text-transform:uppercase;
@@ -64,7 +66,7 @@ body
 
 .buttons li a:hover
 {
-	background-color:#EB4D09;
+	background-color:#f97063;
 	color:#fff;
 	text-shadow:0 1px 1px #75360C;
 }
@@ -77,7 +79,7 @@ body
 .buttons li:last-child a
 {
 	border-radius:3px 0 0 3px;
-	border-right:1px solid #3d3d3d;
+
 }
 
 .buttons li a.save
@@ -93,7 +95,7 @@ textarea
 	border:0;
 	outline:0;
 	resize:none;
-	color:#ddd;
+	color:#fff;
 	width:100%;
 	box-sizing:border-box;
 	padding:2.5em;
@@ -123,7 +125,7 @@ textarea
 {
 	overflow:auto;
 	white-space:pre-wrap;
-	background-color:#222;
+	background-color:#fff;
 	font-size: 12px;
 	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
@@ -144,44 +146,53 @@ textarea
 	padding:0;
 }
 
-.com
+.pln { color:#fffefe!important; }
+pre .str { color:#f4645f; }
+pre .kwd { color:#4bb1b1; }
+pre .com { color:#888888; }
+pre .typ { color:#ef7c61; }
+pre .lit { color:#bcd42a; }
+pre .pun,
+pre .opn,
+pre .clo { color:#ffffff; }
+pre .tag { color:#4bb1b1; }
+pre .atn { color:#ef7c61; }
+pre .atv { color:#bcd42a; }
+pre .dec,
+pre .var { color:#660066; }
+pre .fun { color:#ff0000; }
+
+pre.prettyprint
 {
-  color: #555;
+  background: #3F3F49;
+  border: 0!important;
+  border-radius: 2px;
+	display: block;
+	overflow: hidden;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	font-family: monospace;
 }
 
-.lit
+pre.prettyprint span
 {
-  color: #17CFB6;
+	font-size: 13px!important;
+	/*font-weight: 600!important;*/
 }
 
-.pun, .opn, .clo
+ol.linenums
 {
-  color: #93a1a1;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.fun
+ol.linenums li
 {
-  color: #dc322f;
-}
-
-.str, .atv
-{
-  color: #E3B446;
-}
-
-.kwd, .linenums .tag
-{
-  color: #DB613B;
-}
-
-.typ, .atn, .dec, .var
-{
-  color: #fff;
-}
-
-.pln
-{
-  color: #ccc;
+    background: transparent!important;
+    color: #888888;
+    list-style-type: decimal !important;
+    font-size: 14px!important;
 }
 
 .selected
