@@ -158,7 +158,7 @@ pre .clo { color:#ffffff; }
 pre .tag { color:#4bb1b1; }
 pre .atn { color:#ef7c61; }
 pre .atv { color:#bcd42a; }
-pre .dec,
+pre .dec { color:#ffffff; }
 pre .var { color:#660066; }
 pre .fun { color:#ff0000; }
 
@@ -195,7 +195,7 @@ ol.linenums li
     font-size: 14px!important;
 }
 
-.selected
+ol li.selected
 {
-	background-color: #555;
+	background: #616169 !important;
 }
