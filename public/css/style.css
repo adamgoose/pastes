@@ -1,90 +1,12 @@
 body
 {
   background: #3F3F49;
-	margin:0;
 	font-family:sans-serif;
 	color : #fff;
 }
 
-/* header */
-
-.header
-{
-	z-index:999;
-	padding:0.5em 0.6em 0.6em 0.5em;
-	position:fixed;
-	top:1em;
-	right:1em;
-	overflow:hidden;
-	background-color:transparent;
-	background-color:rgba(255, 255, 255, 0.7);
-}
-
-.header:hover
-{
-	background-color:rgba(255, 255, 255, 1);
-}
-
-.logo
-{
-	opacity:0.8;
-	margin-bottom:0.3em;
-	display: block;
-	text-align: center;
-}
-
-.header:hover .logo
-{
-	opacity:1;
-}
-
-/* menu / buttons */
-
-.buttons
-{
-	margin:0;
-	padding: 0;
-}
-
-.buttons li
-{
-	display:inline;
-	float:right;
-}
-
-.buttons li a, .buttons li a:visited
-{
-	display:inline-block;
-	background-color:#444;
-	color:#fff;
-	padding:0.2em 0.5em 0.2em 0.5em;
-	text-decoration:none;
-	text-transform:uppercase;
-	font-size:0.8em;
-	font-weight:bold;
-}
-
-.buttons li a:hover
-{
-	background-color:#f97063;
-	color:#fff;
-	text-shadow:0 1px 1px #75360C;
-}
-
-.buttons li:first-child a
-{
-	border-radius:0 3px 3px 0;
-}
-
-.buttons li:last-child a
-{
-	border-radius:3px 0 0 3px;
-
-}
-
-.buttons li a.save
-{
-	border-radius:3px;
+.navbar {
+	margin-bottom: 0px;
 }
 
 /* edit textarea */
@@ -98,7 +20,6 @@ textarea
 	color:#fff;
 	width:100%;
 	box-sizing:border-box;
-	padding:2.5em;
 	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 	font-size: 12px;
 }
@@ -106,13 +27,10 @@ textarea
 
 .prettyprint, textarea
 {
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	margin:0;
+	height: 100%;
+  width: 100%;
 	line-height:1.8em;
+	position: fixed
 }
 
 textarea
@@ -168,7 +86,6 @@ pre.prettyprint
   border: 0!important;
   border-radius: 2px;
 	display: block;
-	overflow: hidden;
 	white-space: pre;
 	white-space: pre-wrap;
 	word-wrap: break-word;

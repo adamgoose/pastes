@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "a78e01ce201fd1c160c5a45b68df5863",
+    "hash": "85f193c83c086b8d3f3f41e37ff12914",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -230,12 +230,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "e3be0deb504cf219544e99f881d2b39a0664e9e1"
+                "reference": "cc0bd4d8c8f86d4fb841d02d3a7a2106c4f037f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/e3be0deb504cf219544e99f881d2b39a0664e9e1",
-                "reference": "e3be0deb504cf219544e99f881d2b39a0664e9e1",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/cc0bd4d8c8f86d4fb841d02d3a7a2106c4f037f9",
+                "reference": "cc0bd4d8c8f86d4fb841d02d3a7a2106c4f037f9",
                 "shasum": ""
             },
             "require": {
@@ -338,7 +338,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2013-12-10 03:31:04"
+            "time": "2013-12-11 03:57:59"
         },
         {
             "name": "monolog/monolog",
@@ -1469,6 +1469,59 @@
             "description": "Symfony Translation Component",
             "homepage": "http://symfony.com",
             "time": "2013-11-28 10:27:26"
+        },
+        {
+            "name": "yetanotherape/diff-match-patch",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yetanotherape/diff-match-patch.git",
+                "reference": "ca13d26803e5181682853ad5d3128c6f8407acd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yetanotherape/diff-match-patch/zipball/ca13d26803e5181682853ad5d3128c6f8407acd0",
+                "reference": "ca13d26803e5181682853ad5d3128c6f8407acd0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "lib-iconv": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "DiffMatchPatch": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Daniil Skrobov",
+                    "email": "yetanotherape@gmail.com"
+                },
+                {
+                    "name": "Neil Fraser",
+                    "email": "fraser@google.com",
+                    "homepage": "http://neil.fraser.name/"
+                }
+            ],
+            "description": "Port of the google-diff-match-patch (https://code.google.com/p/google-diff-match-patch/) lib to PHP",
+            "homepage": "https://code.google.com/p/google-diff-match-patch/",
+            "keywords": [
+                "Fuzzy search",
+                "Match",
+                "diff",
+                "patch"
+            ],
+            "time": "2013-06-02 16:40:10"
         }
     ],
     "packages-dev": [
@@ -1478,9 +1531,9 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "yetanotherape/diff-match-patch": 20
+    },
     "platform": [
 
     ],

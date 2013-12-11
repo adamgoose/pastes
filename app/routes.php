@@ -10,6 +10,8 @@ Route::get('{paste}/fork', ['as' => 'fork', 'uses' => 'PasteController@fork']);
 
 Route::get('{paste}/raw', ['as' => 'raw', 'uses' => 'PasteController@raw']);
 
+Route::get('{paste}/diff', ['as' => 'diff', 'uses' => 'PasteController@diff']);
+
 Route::bind('paste', function($value)
 {
   try {

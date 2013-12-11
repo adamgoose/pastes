@@ -1,5 +1,5 @@
 @section('buttons')
-  <li><a href="javascript: createPaste()" class="save">Save</a></li>
+  <li><a href="#" class="save">Save</a></li>
 @stop
 
 @section('content')
@@ -9,4 +9,17 @@
     {{ Form::hidden('fork', $fork->id)}}
   @endif
   {{ Form::close() }}
+@stop
+
+@section('scripts')
+  <script>
+  $(function()
+  {
+    $(".save").click(function()
+    {
+      $("#paster").submit();
+      return false;
+    });
+  });
+  </script>
 @stop
