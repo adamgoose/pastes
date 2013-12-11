@@ -1,3 +1,4 @@
+/app/database/production.sqlite
 /bootstrap/compiled.php
 /vendor
 composer.phar
