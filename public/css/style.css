@@ -102,7 +102,7 @@ pre.prettyprint span
 ol.linenums
 {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 75px;
 }
 
 ol.linenums li
@@ -124,4 +124,14 @@ ol li.selected
 
 .marker.ins {
   margin: 0 0 0 -60px;
+}
+
+del, .marker {
+  color: #C04545;
+  text-decoration: none;
+}
+
+ins, .marker.ins {
+  color: #49A249;
+  text-decoration: none;
 }
