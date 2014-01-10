@@ -24,11 +24,11 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
+$env = $app->detectEnvironment(function(){
 
-	'local' => array('adam-s-macbook-pro.local'),
+	return getenv('PASTE_ENV') ?: 'production';
 
-));
+});
 
 /*
 |--------------------------------------------------------------------------

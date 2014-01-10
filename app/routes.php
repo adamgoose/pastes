@@ -14,15 +14,11 @@ Route::get('{paste}/diff', ['as' => 'diff', 'uses' => 'PasteController@diff']);
 
 Route::bind('paste', function($value)
 {
-  try {
+	try {
+		$paste = Paste::findOrFail(Math::to_base_10($value));
+	} catch(Exception $e) {
+		App::abort(404);
+	}
 
-    $paste = Paste::findOrFail(Math::to_base_10($value));
-
-  } catch(Exception $e) {
-
-    App::abort(404);
-
-  }
-
-  return $paste;
+	return $paste;
 });

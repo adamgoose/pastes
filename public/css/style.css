@@ -1,36 +1,56 @@
 body
 {
-  background: #3F3F49;
-	font-family:sans-serif;
+	background: #3F3F49;
 	color : #fff;
+	font-family:sans-serif;
 }
 
-.navbar {
-	margin-bottom: 0px;
+.navbar
+{
+	margin-bottom: 0;
 }
+
+.error-popup
+{
+	background: #f87265;
+	font-size: ;
+	left: 10rem;
+	position: fixed;
+	right: 10rem;
+	top: 0;
+	z-index: 1100;
+}
+	.error-popup ul
+	{
+		font-size: 12px;
+		list-style-type: none;
+		margin: 0;
+		padding: .75em 1em;
+	}
+
 
 /* edit textarea */
 
 textarea
 {
-	background-color:transparent;
-	border:0;
-	outline:0;
-	resize:none;
-	color:#fff;
-	width:100%;
-	box-sizing:border-box;
+	background-color: transparent;
+	border: 0;
+	box-sizing: border-box;
+	color: #fff;
 	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 	font-size: 12px;
+	outline: 0;
+	resize: none;
+	width: 100%;
 }
 
 
 .prettyprint, textarea
 {
 	height: 100%;
-  width: 100%;
 	line-height:1.8em;
 	position: fixed
+	width: 100%;
 }
 
 textarea
@@ -41,18 +61,18 @@ textarea
 /* code prettify styles */
 .prettyprint
 {
+	background-color:#fff;
+	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+	font-size: 12px;
+	margin: 1em;
 	overflow:auto;
 	white-space:pre-wrap;
-	background-color:#fff;
-	font-size: 12px;
-	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  margin: 1em;
 }
 
 .prettyprint ol
 {
-	color:#777;
-	padding:2em 3em 2em 5em;
+	color: #777;
+	padding: 2em 3em 2em 5em;
 }
 
 .prettyprint code
@@ -65,52 +85,52 @@ textarea
 	padding:0;
 }
 
-.pln { color:#fffefe!important; }
-pre .str { color:#f4645f; }
-pre .kwd { color:#4bb1b1; }
-pre .com { color:#888888; }
-pre .typ { color:#ef7c61; }
-pre .lit { color:#bcd42a; }
+.pln { color: #fffefe !important; }
+pre .str { color: #f4645f; }
+pre .kwd { color: #4bb1b1; }
+pre .com { color: #888888; }
+pre .typ { color: #ef7c61; }
+pre .lit { color: #bcd42a; }
 pre .pun,
 pre .opn,
-pre .clo { color:#ffffff; }
-pre .tag { color:#4bb1b1; }
-pre .atn { color:#ef7c61; }
-pre .atv { color:#bcd42a; }
-pre .dec { color:#ffffff; }
-pre .var { color:#660066; }
-pre .fun { color:#ff0000; }
+pre .clo { color: #ffffff; }
+pre .tag { color: #4bb1b1; }
+pre .atn { color: #ef7c61; }
+pre .atv { color: #bcd42a; }
+pre .dec { color: #ffffff; }
+pre .var { color: #660066; }
+pre .fun { color: #ff0000; }
 
 pre.prettyprint
 {
-  background: #3F3F49;
-  border: 0!important;
-  border-radius: 2px;
+	background: #3F3F49;
+	border-radius: 2px;
+	border: 0 !important;
 	display: block;
-	white-space: pre;
-	white-space: pre-wrap;
-	word-wrap: break-word;
 	font-family: monospace;
+	white-space: pre-wrap;
+	white-space: pre;
+	word-wrap: break-word;
 }
 
 pre.prettyprint span
 {
-	font-size: 13px!important;
-	/*font-weight: 600!important;*/
+	font-size: 13px !important;
+	/*font-weight: 600 !important;*/
 }
 
 ol.linenums
 {
-    margin-top: 0;
-    margin-bottom: 75px;
+	margin-bottom: 75px;
+	margin-top: 0;
 }
 
 ol.linenums li
 {
-    background: transparent!important;
-    color: #888888;
-    list-style-type: decimal !important;
-    font-size: 14px!important;
+	background: transparent !important;
+	color: #888888;
+	font-size: 14px!important;
+	list-style-type: decimal !important;
 }
 
 ol li.selected
@@ -118,20 +138,24 @@ ol li.selected
 	background: #616169 !important;
 }
 
-.marker {
-  margin: 0 0 0 -45px;
+.marker
+{
+	margin: 0 0 0 -45px;
 }
 
-.marker.ins {
-  margin: 0 0 0 -60px;
+.marker.ins
+{
+	margin: 0 0 0 -60px;
 }
 
-del, .marker {
-  color: #C04545;
-  text-decoration: none;
+del, .marker
+{
+	color: #C04545;
+	text-decoration: none;
 }
 
-ins, .marker.ins {
-  color: #49A249;
-  text-decoration: none;
+ins, .marker.ins
+{
+	color: #49A249;
+	text-decoration: none;
 }

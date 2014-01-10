@@ -21,17 +21,23 @@ class PasteController extends \BaseController {
 			'paste' => 'required'
 		]);
 
-	  if ($validator->fails())
-	  {
-	    return Redirect::route('create')->withErrors($validator);
-	  }
+		if ($validator->fails())
+		{
+			return Redirect::route('create')
+				->withErrors($validator);
+		}
 
-	  $paste = Paste::create([
-	  	'paste' => Input::get('paste'),
-	  	'fork_of' => Input::get('fork', null)
-	  ]);
+		try {
+			$paste = Paste::create([
+				'paste' => Input::get('paste'),
+				'fork_of' => Input::get('fork', null)
+			]);
+		} catch (Exception $e) {
+			return Redirect::route('create')
+				->withErrors($e->getMessage());
+		}
 
-	  return Redirect::route('show', Math::to_base($paste->id));
+		return Redirect::route('show', Math::to_base($paste->id));
 	}
 
 	public function show($paste)
@@ -42,13 +48,13 @@ class PasteController extends \BaseController {
 
 	public function fork($paste)
 	{
-	  $this->layout->content = View::make('create')
-	  	->withFork($paste);
+		$this->layout->content = View::make('create')
+			->withFork($paste);
 	}
 
 	public function raw($paste)
 	{
-	  return Response::make($paste->paste)->header('Content-Type', 'text/plain');
+		return Response::make($paste->paste)->header('Content-Type', 'text/plain');
 	}
 
 	public function diff($paste)
@@ -71,9 +77,9 @@ class PasteController extends \BaseController {
 			}
 		}
 
-	  $this->layout->content = View::make('diff')
-	  	->withPaste($paste)
-	  	->withDiff($diff);
+		$this->layout->content = View::make('diff')
+			->withPaste($paste)
+			->withDiff($diff);
 	}
 
 }
